@@ -2,6 +2,6 @@
 
 <h2>{{ site.title }}</h2>
 {{ site.description|raw }}
-<img src="{{ site.url|capturize }}" width="200" />
-
+<img src="{% capturize site.url with { 'browser_width' : 1024, 'browser_height' : 768, 'resize_width' : 200 } %}" />
 {% endfor %}
+
