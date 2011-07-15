@@ -1,0 +1,7 @@
+{% for site in sites %}
+
+<h2>{{ site.title }}</h2>
+{{ site.description|raw }}
+<img src="{{ site.url|capturize }}" width="200" />
+
+{% endfor %}
